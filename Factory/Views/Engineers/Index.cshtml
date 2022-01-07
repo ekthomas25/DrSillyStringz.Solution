@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+@using Factory.Models
+
+<h2>Engineers</h2>
+<hr />
+
+@if(Model.Count == 0)
+{
+  <h3>No engineers have been hired.</h3>
+}
+<ul>
+  @foreach(Engineer engineer in Model)
+  {
+    <li>@Html.ActionLink($"{engineer.FirstName} {engineer.LastName}", "Details", new { id = engineer.EngineerId })</li>
+  }
+</ul>
+@Html.ActionLink("Add New Engineer", "Create")
+@Html.ActionLink("Home", "Index", "Home")
