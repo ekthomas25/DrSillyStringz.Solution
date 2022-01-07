@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h2>Edit Machine</h2>
+<hr />
+
+@using(Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MachineId)
+
+    <h3>@Html.LabelFor(model => model.Name)</h3>
+  @Html.EditorFor(model => model.Name, new { @class="form-control", required = "required" })
+
+  <h3>@Html.LabelFor(model => model.InstallDate, "Installation Date")</h3>
+  @Html.EditorFor(model => model.InstallDate, "{0:yyyy-MM-dd}", new {@type = "date", @class="form-control", required = "required" })
+
+  <h3>@Html.LabelFor(model => model.OperationalStatus, "Current Operational Status")</h3>
+  <span>Operational</span>@Html.RadioButtonFor(m => m.OperationalStatus, "Operational")
+  <span>Being Repaired</span>@Html.RadioButtonFor(m => m.OperationalStatus, "Being Repaired")
+
+  <input type="submit" value="Save" class="btn btn-dark" />
+}
+@Html.ActionLink("Cancel", "Details", new { id = Model.MachineId })
