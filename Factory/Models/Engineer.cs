@@ -13,7 +13,8 @@ namespace Factory.Models
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Notes { get; set; }
-    public DateTime StartDate { get; set; }
+    public string WorkStatus { get; set; }
+    public DateTime HireDate { get; set; }
     public virtual ICollection<EngineerMachine> EngineerMachines { get; set; }
   }
 }
