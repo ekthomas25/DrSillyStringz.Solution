@@ -88,7 +88,7 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult DetelMachine(int joinId, int engineerId)
+    public ActionResult DeleteMachine(int joinId, int engineerId)
     {
       var joinEntry = _db.EngineerMachines.FirstOrDefault(joinEntry => joinEntry.EngineerMachineId == joinId);
       _db.EngineerMachines.Remove(joinEntry);
