@@ -1,0 +1,37 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Engineer Profile</h2>
+<hr />
+
+<h3>First Name: @Html.DisplayFor(model => model.FirstName)</h3>
+
+<h3>Last Name: @Html.DisplayFor(model => model.LastName)</h3>
+
+<h3>Hire Date: @Model.HireDate.ToShortDateString()</h3>
+
+<h3>Work Status: @Html.DisplayFor(model => model.WorkStatus)</h3>
+<h3>Notes:</h3>
+<p>@Html.DisplayFor(model => model.Notes)</p>
+
+<h4>Machine Repair Licenses:</h4>
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>None</p>
+}
+else
+{
+  <ul>
+    @foreach(var join in Model.JoinEntities)
+    {
+      <li>@join.Machine.Name</li>
+    }
+  </ul>
+}
+@Html.ActionLink("Edit Profile", "Edit", new { id = Model.EngineerId }) | 
+@Html.ActionLink("Delete", "Delete", new { id = Model.EngineerId }) | 
+@Html.ActionLink("Add New License", "AddLicense", new { id = Model.EngineerId }) | 
+@Html.ActionLink("Back to Engineers", "Index")
