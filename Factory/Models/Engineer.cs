@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace Factory.Models
 {
@@ -15,6 +16,6 @@ namespace Factory.Models
     public string Notes { get; set; }
     public string WorkStatus { get; set; }
     public DateTime HireDate { get; set; }
-    public virtual ICollection<EngineerMachine> EngineerMachines { get; set; }
+    public virtual ICollection<EngineerMachine> JoinEntities { get; set; }
   }
 }
