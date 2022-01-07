@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Add Machine License to Engineer</h2>
+<hr />
+
+@using(Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.EngineerId)
+  @Html.Label("Select License")
+  @Html.DropDownList("MachineId")
+  <input type="submit" value="Add License" class="btn btn-dark" />
+}
