@@ -1,3 +1,84 @@
 body {
-  background-color: azure;
+  background-color: #CBEDF6;
+}
+
+h2 {
+  font-family: 'Lobster Two', cursive;
+  margin-top: 3em;
+}
+
+h3 {
+  font-family: 'Concert One', cursive;
+  margin-left: 2em;
+  margin-right: 2em;
+
+}
+
+h4 {
+  font-family: 'Lobster Two', cursive;
+}
+
+li {
+  font-family: monospace;
+  margin-left: 3em;
+  margin-right: 2.25em;
+}
+div#header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: .6em;
+  margin-bottom: 2em;
+  background-color: #FFA947;
+  color: #023047;
+  font-family: 'Lobster Two', cursive;
+}
+
+.container {
+  margin-top: 2em;
+}
+
+.splash-lists {
+  background-color: #FFDC85;
+  border: .5px solid #e2c069;
+  border-radius: 15px;
+  margin: 0.25em;
+  padding: 1em;
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+.hub {
+  background-color: #45A7D9;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 15px;
+  text-align: center;
+  font-family: monospace;
+}
+a {
+  color: #023047;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.notes {
+  margin-left: 4em;
+  font-family: monospace;
+}
+
+.navigation-links {
+  color: #023047;
+  font-family: monospace;
+
+}
+
+.btn {
+  margin-left: 4em;
+  margin-top: 1.5em;
 }
