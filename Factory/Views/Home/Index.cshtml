@@ -10,35 +10,38 @@
   <div class="row">
 
     <div class="col-6">
-      @Html.ActionLink("Go to Engineers Hub", "Index", "Engineers")
-      <h3>Current Engineers:</h3>
-      @if(Model.Engineers.Count == 0)
-      {
-        <p>There are currently no Engineers on staff.</p>
-      }
-      else
-      {
-        @foreach(Engineer engineer in Model.Engineers)
+      <div class="splash-lists">
+        <p class="hub">@Html.ActionLink("Go to Engineers Hub", "Index", "Engineers")</p>
+        <h3>Current Engineers:</h3>
+        @if(Model.Engineers.Count == 0)
         {
-          <li>@Html.ActionLink($"{engineer.FirstName} {engineer.LastName}", "Details", "Engineers", new { id = engineer.EngineerId })</li>
+          <p>There are currently no Engineers on staff.</p>
         }
-      }
+        else
+        {
+          @foreach(Engineer engineer in Model.Engineers)
+          {
+            <li>@Html.ActionLink($"{engineer.FirstName} {engineer.LastName}", "Details", "Engineers", new { id = engineer.EngineerId })</li>
+          }
+        }
+      </div>
     </div>
-
     <div class="col-6">
-      @Html.ActionLink("Go to Machines Hub", "Index", "Machines")
-      <h3>Current Machines:</h3>
-      @if(Model.Engineers.Count == 0)
-      {
-        <p>There are currently no Machines installed.</p>
-      }
-      else
-      {
-        @foreach(Machine machine in  Model.Machines)
+      <div class="splash-lists">
+        <p class="hub">@Html.ActionLink("Go to Machines Hub", "Index", "Machines")</p>
+        <h3>Current Machines:</h3>
+        @if(Model.Engineers.Count == 0)
         {
-          <li>@Html.ActionLink($"{machine.Name}", "Details", "Machines", new { id = machine.MachineId })</li>
+          <p>There are currently no Machines installed.</p>
         }
-      }
+        else
+        {
+          @foreach(Machine machine in  Model.Machines)
+          {
+            <li>@Html.ActionLink($"{machine.Name}", "Details", "Machines", new { id = machine.MachineId })</li>
+          }
+        }
+      </div>
     </div>
   </div>
 </div>
