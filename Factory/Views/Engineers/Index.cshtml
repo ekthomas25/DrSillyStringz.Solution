@@ -16,5 +16,8 @@
     <li>@Html.ActionLink($"{engineer.FirstName} {engineer.LastName}", "Details", new { id = engineer.EngineerId })</li>
   }
 </ul>
-@Html.ActionLink("Add New Engineer", "Create") | 
-@Html.ActionLink("Home", "Index", "Home")
+<hr />
+<div class="navigation-links">
+  @Html.ActionLink("Add New Engineer", "Create") | 
+  @Html.ActionLink("Home", "Index", "Home")
+</div>

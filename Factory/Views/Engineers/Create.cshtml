@@ -4,24 +4,29 @@
 @model Factory.Models.Engineer
 
 <h2>Create New Employee Record</h2>
-
+<hr />
 @using(Html.BeginForm())
 {
   <h3>@Html.LabelFor(model => model.FirstName, "First Name")</h3>
-  @Html.TextBoxFor(model => model.FirstName, new { @class="form-control", required = "required" })
-
+  <div class="notes">
+    @Html.TextBoxFor(model => model.FirstName, new { @class="form-control", required = "required" })
+  </div>
   <h3>@Html.LabelFor(model => model.LastName, "Last Name")</h3>
-  @Html.TextBoxFor(model => model.LastName, new { @class="form-control", required = "required" })
-
+  <div class="notes">
+    @Html.TextBoxFor(model => model.LastName, new { @class="form-control", required = "required" })
+  </div>
   <h3>@Html.LabelFor(model => model.HireDate, "Hire Date")</h3>
-  @Html.TextBoxFor(model => model.HireDate, "{0:yyyy-MM-dd}", new {@type = "date", @class="form-control", required = "required" })
-
+  <div class="notes">
+    @Html.TextBoxFor(model => model.HireDate, "{0:yyyy-MM-dd}", new {@type = "date", @class="form-control", required = "required" })
+  </div>
   <h3>@Html.LabelFor(model => model.WorkStatus, "Current Work Status")</h3>
-  <span>Idle</span>@Html.RadioButtonFor(m => m.WorkStatus, "Idle")
-  <span>Busy</span>@Html.RadioButtonFor(m => m.WorkStatus, "Busy")
-
+  <div class="notes">
+    <span>Idle</span>@Html.RadioButtonFor(m => m.WorkStatus, "Idle")
+    <span>Busy</span>@Html.RadioButtonFor(m => m.WorkStatus, "Busy")
+  </div>
   <h3>@Html.LabelFor(model => model.Notes)</h3>
-  @Html.TextBoxFor(model => model.Notes, new { @class="form-control" })
-
+  <div class="notes">
+    @Html.TextBoxFor(model => model.Notes, new { @class="form-control" })
+  </div>
   <input type="submit" value="Save" class="btn btn-dark" />
 }

@@ -15,12 +15,13 @@
 
 <h3>Work Status: @Html.DisplayFor(model => model.WorkStatus)</h3>
 <h3>Notes:</h3>
-<p>@Html.DisplayFor(model => model.Notes)</p>
+<p class="notes">@Html.DisplayFor(model => model.Notes)</p>
 
-<h4>Machine Repair Licenses:</h4>
+<h2>Machine Repair Licenses:</h2>
+<hr />
 @if(@Model.JoinEntities.Count == 0)
 {
-  <p>None</p>
+  <p class="notes">None</p>
 }
 else
 {
@@ -38,7 +39,9 @@ else
     }
   </ul>
 }
-@Html.ActionLink("Edit Profile", "Edit", new { id = Model.EngineerId }) | 
-@Html.ActionLink("Delete", "Delete", new { id = Model.EngineerId }) | 
-@Html.ActionLink("Add New License", "AddMachine", new { id = Model.EngineerId }) | 
-@Html.ActionLink("Back to Engineers", "Index")
+<hr />
+<div class="navigation-links">
+  @Html.ActionLink("Edit Profile", "Edit", new { id = Model.EngineerId,  })  | 
+  @Html.ActionLink("Delete", "Delete", new { id = Model.EngineerId }) | @Html.ActionLink("Add New License", "AddMachine", new { id = Model.EngineerId }) | 
+  @Html.ActionLink("Back to Engineers", "Index")
+</div>
