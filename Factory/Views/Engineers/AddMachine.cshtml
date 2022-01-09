@@ -14,3 +14,5 @@
   <div class="notes">@Html.DropDownList("MachineId")</div>
   <input type="submit" value="Add License" class="btn btn-dark" />
 }
+<hr />
+<div class="navigation-links">@Html.ActionLink("Cancel", "Details", new { id = Model.EngineerId })</div>
