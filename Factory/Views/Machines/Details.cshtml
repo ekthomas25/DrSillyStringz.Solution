@@ -13,10 +13,11 @@
 
 <h3>Current Operational Status: @Html.DisplayFor(model => model.OperationalStatus)</h3>
 
-<h4>Licensed Engineers for this machine:</h4>
+<h2>Licensed Engineers for this machine:</h2>
+<hr />
 @if(@Model.JoinEntities.Count == 0)
 {
-  <p>None</p>
+  <p class="notes">None</p>
 }
 else
 {
@@ -33,7 +34,10 @@ else
     }
   </ul>
 }
-@Html.ActionLink("Edit Profile", "Edit", new { id = Model.MachineId }) | 
-@Html.ActionLink("Delete", "Delete", new { id = Model.MachineId }) | 
-@Html.ActionLink("Add New Licensed Engineer", "AddEngineer", new { id = Model.MachineId }) | 
-@Html.ActionLink("Back to Machines", "Index")
+<hr />
+<div class="navigation-links">
+  @Html.ActionLink("Edit Profile", "Edit", new { id = Model.MachineId }) | 
+  @Html.ActionLink("Delete", "Delete", new { id = Model.MachineId }) | 
+  @Html.ActionLink("Add New Licensed Engineer", "AddEngineer", new { id = Model.MachineId }) | 
+  @Html.ActionLink("Back to Machines", "Index")
+</div>
