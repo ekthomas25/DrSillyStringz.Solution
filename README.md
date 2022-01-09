@@ -34,19 +34,19 @@ _This is an MVC web application that was created for a fake factory run by a mys
 ### File Setup
 
 * _Once everything is set up and configured, you will need to open up your terminal, navigate to your Desktop and type the command:_
-`git clone https://github.com/ekthomas25/TEMPLATE.Solution.git`
+`git clone https://github.com/ekthomas25/DrSillyStringz.Solution.git`
 
 * _This will clone the repository to your desktop and you will be able to then open the folder in VSCode._
-* _Open the terminal in VSCode and navigate to_ `TEMPLATE.Solution > PROJECTFILE` _and type the following command:_ `touch appsettings.json`
+* _Open the terminal in VSCode and navigate to_ `DrSillyStringz.Solution > Factory` _and type the following command:_ `touch appsettings.json`
 * _Copy and paste the following code into the new file:_
 ```
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=TEMPLATE_DATABASE;uid=root;pwd=[YOUR PASSWORD HERE];"
+      "DefaultConnection": "Server=localhost;Port=3306;database=liz_thomas;uid=root;pwd=[YOUR PASSWORD HERE];"
   }
 }
-* _You will need to input your own password where it says_ [YOUR PASSWORD HERE]
 ```
+* _You will need to input your own password where it says_ [YOUR PASSWORD HERE]
 * Make sure you are in the project directory folder, run the command `dotnet ef database update`
 * Then run the command `dotnet restore` to install project dependencies
 * Then run the command `dotnet run` to run the project in the browser
