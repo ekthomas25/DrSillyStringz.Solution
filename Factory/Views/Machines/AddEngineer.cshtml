@@ -10,9 +10,13 @@
 @using(Html.BeginForm())
 {
   @Html.HiddenFor(model => model.MachineId)
-  @Html.Label("Select Engineer")
-  @Html.DropDownList("EngineerId")
+  <h3>@Html.Label("Select Engineer")</h3>
+  <div class="notes">
+    @Html.DropDownList("EngineerId")
+  </div>
   <input type="submit" value="Add Engineer" class="btn btn-dark" />
 }
-
-@Html.ActionLink("Cancel", "Details", new { id = Model.MachineId})
+<hr />
+<div class="navigation-links">
+  @Html.ActionLink("Cancel", "Details", new { id = Model.MachineId})
+</div>
