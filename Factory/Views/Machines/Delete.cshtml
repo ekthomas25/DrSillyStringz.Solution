@@ -3,11 +3,13 @@
 }
 <h2>Delete Machine Record</h2>
 <hr />
-<p>Are you sure you want to delete the @Model.Name machine's records?</p>
+<p class="notes">Are you sure you want to delete the @Model.Name machine's records?</p>
 
 @using(Html.BeginForm())
 {
   <input type="submit" value="Delete Record" class="btn btn-dark"/>
 }
-
-@Html.ActionLink("Cancel", "Details", new { id = Model.MachineId })
+<hr />
+<div class="navigation-links">
+  @Html.ActionLink("Cancel", "Details", new { id = Model.MachineId })
+</div>
