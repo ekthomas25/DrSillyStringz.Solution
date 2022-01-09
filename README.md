@@ -1,8 +1,8 @@
-# Application Name
+# Dr. Sillystringz Factory
 
 #### By Liz Thomas
 
-#### _Short Description_
+#### _A web application to keep track of a fake factory's machine repairs_
 
 ## Technologies Used
 
@@ -20,7 +20,7 @@
 
 ## Description
 
-_This web application was created for..._
+_This is an MVC web application that was created for a fake factory run by a mysterious man named Dr. Sillystringz. The application gives the administrator the ability to keep track of the machines that are installed at the factory, and their operational state, as well as the engineers that are employed there and whether or not they are currently busy working on a machine. The project has CRUD methods implemented within its classes allowing the user to create, edit, view, and delete machines or engineers from the system. This is an independent project that was created during week 11 at Epicodus._
 
 ## Setup/Installation Requirements
 
@@ -33,7 +33,7 @@ _This web application was created for..._
 
 ### File Setup
 
-* _Once you have VSCode, Node, and GIT set up, you will need to open up your terminal, navigate to your Desktop and type the command:_
+* _Once everything is set up and configured, you will need to open up your terminal, navigate to your Desktop and type the command:_
 `git clone https://github.com/ekthomas25/TEMPLATE.Solution.git`
 
 * _This will clone the repository to your desktop and you will be able to then open the folder in VSCode._
