@@ -20,9 +20,6 @@ namespace Factory.Controllers
       dynamic model = new ExpandoObject();
       model.Engineers = _db.Engineers.ToList();
       model.Machines = _db.Machines.ToList();
-      
-      // ViewBag.MachineId = _db.Machines.ToList();
-      // ViewBag.EngineerId = _db.Engineers.ToList();
       return View(model);
     }
   }
